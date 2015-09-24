@@ -11,6 +11,29 @@ set out=..\Win32LeanAndMean.hpp
 >>%in% echo #include ^<Windows.h^>
 
 cd.>%out%
+>>%out% echo /*
+>>%out% echo Auto-generated from MinGW w32api with a MIT style license:
+>>%out% echo,
+>>%out% echo Copyright (c) 2012 MinGW.org project
+>>%out% echo,
+>>%out% echo Permission is hereby granted, free of charge, to any person obtaining a
+>>%out% echo copy of this software and associated documentation files (the "Software"),
+>>%out% echo to deal in the Software without restriction, including without limitation
+>>%out% echo the rights to use, copy, modify, merge, publish, distribute, sublicense,
+>>%out% echo and/or sell copies of the Software, and to permit persons to whom the
+>>%out% echo Software is furnished to do so, subject to the following conditions:
+>>%out% echo,
+>>%out% echo The above copyright notice, this permission notice and the below disclaimer
+>>%out% echo shall be included in all copies or substantial portions of the Software.
+>>%out% echo,
+>>%out% echo THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+>>%out% echo IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+>>%out% echo FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+>>%out% echo AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+>>%out% echo LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+>>%out% echo FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+>>%out% echo DEALINGS IN THE SOFTWARE.
+>>%out% echo */
 >>%out% echo #pragma comment(lib, "kernel32")
 >>%out% echo #pragma comment(lib, "user32")
 >>%out% echo #pragma comment(lib, "gdi32")
