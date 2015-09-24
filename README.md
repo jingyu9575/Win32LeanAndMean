@@ -2,4 +2,4 @@
 
 C++14 `<Windows.h>` without macros.
 
-[Download the header](release)
+[Download the header](../../releases)
