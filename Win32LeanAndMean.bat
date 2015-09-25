@@ -11,6 +11,7 @@ set out=..\Win32LeanAndMean.hpp
 >>%in% echo #include ^<Windows.h^>
 
 cd.>%out%
+>>%out% echo #pragma once
 >>%out% echo /*
 >>%out% echo Auto-generated from MinGW w32api with a MIT style license:
 >>%out% echo,
