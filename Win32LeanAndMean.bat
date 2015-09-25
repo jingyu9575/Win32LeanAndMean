@@ -13,7 +13,7 @@ set out=..\Win32LeanAndMean.hpp
 cd.>%out%
 >>%out% echo #pragma once
 >>%out% echo /*
->>%out% echo Auto-generated from MinGW w32api with a MIT style license:
+>>%out% echo Auto-generated from MinGW w32api. Original license of w32api:
 >>%out% echo,
 >>%out% echo Copyright (c) 2012 MinGW.org project
 >>%out% echo,
