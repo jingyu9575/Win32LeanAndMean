@@ -8,6 +8,7 @@ set out=..\Win32LeanAndMean.hpp
 >>%in% echo #define _UNICODE
 >>%in% echo #define WIN32_LEAN_AND_MEAN
 >>%in% echo #define _INC_STDLIB
+>>%in% echo #define _INC_STRING
 >>%in% echo #include ^<Windows.h^>
 
 cd.>%out%

@@ -1,4 +1,5 @@
 #include <cstddef>
+#include <string.h>
 #include "obj/Win32LeanAndMean.hpp"
 
 namespace wlm = Win32LeanAndMean;
@@ -65,11 +66,11 @@ wlm::LRESULT __stdcall WndProc(wlm::HWND hWnd, wlm::UINT message, wlm::WPARAM wP
 
 	switch (message) {
 	case wlm::wm_paint:
-		hdc = BeginPaint(hWnd, &ps);
+		hdc = wlm::BeginPaint(hWnd, &ps);
 
-		TextOutW(hdc, 5, 5, greeting, wlm::wcslen(greeting));
+		wlm::TextOutW(hdc, 5, 5, greeting, wcslen(greeting));
 
-		EndPaint(hWnd, &ps);
+		wlm::EndPaint(hWnd, &ps);
 		break;
 	case wlm::wm_destroy:
 		wlm::PostQuitMessage(0);
@@ -78,6 +79,5 @@ wlm::LRESULT __stdcall WndProc(wlm::HWND hWnd, wlm::UINT message, wlm::WPARAM wP
 		return wlm::DefWindowProcW(hWnd, message, wParam, lParam);
 		break;
 	}
-
 	return 0;
 }
