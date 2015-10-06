@@ -9,6 +9,7 @@ set out=..\Win32LeanAndMean.hpp
 >>%in% echo #define WIN32_LEAN_AND_MEAN
 >>%in% echo #define _INC_STDLIB
 >>%in% echo #define _INC_STRING
+>>%in% echo #define _INC_CTYPE
 >>%in% echo #include ^<Windows.h^>
 
 cd.>%out%
@@ -36,6 +37,7 @@ cd.>%out%
 >>%out% echo FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 >>%out% echo DEALINGS IN THE SOFTWARE.
 >>%out% echo */
+>>%out% echo #ifndef __GNUC__
 >>%out% echo #pragma comment(lib, "kernel32")
 >>%out% echo #pragma comment(lib, "user32")
 >>%out% echo #pragma comment(lib, "gdi32")
@@ -48,6 +50,7 @@ cd.>%out%
 >>%out% echo #pragma comment(lib, "uuid")
 >>%out% echo #pragma comment(lib, "odbc32")
 >>%out% echo #pragma comment(lib, "odbccp32")
+>>%out% echo #endif
 >>%out% echo #include ^<cstdarg^>
 >>%out% echo namespace Win32LeanAndMean {
 >>%out% echo #ifdef _MSC_VER
