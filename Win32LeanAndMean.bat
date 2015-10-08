@@ -64,6 +64,8 @@ call :run 64
 call :run 32
 >>%out% echo inline LONG_PTR __stdcall SetWindowLongPtrW(HWND hWnd,int nIndex,LONG dwNewLong)
 >>%out% echo     {return SetWindowLongW(hWnd,nIndex,dwNewLong);}
+>>%out% echo inline LONG_PTR __stdcall GetWindowLongPtrW(HWND hWnd,int nIndex)
+>>%out% echo     {return GetWindowLongW(hWnd,nIndex);}
 >>%out% echo #endif
 >>%out% echo #ifdef _MSC_VER
 >>%out% echo #pragma warning(pop)
