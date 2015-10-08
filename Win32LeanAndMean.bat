@@ -99,7 +99,7 @@ ssed -n -R "s/^#define ([a-zA-Z0-9_]+) .*$/\1/p" def.tmp >name.tmp
 cat def.tmp name.tmp > def.c
 
 gcc -m%1 -E -P def.c -o def.tmp
-paste -d" " name.tmp def.tmp | ssed -n -R "s/^([A-Z0-9_]+) ((?!{).*[0-9].*(?<!}))$/static const auto \L\1\E = \2;/p" | ssed -R "s/__MINGW_NAME_AW\(MAKEINTRESOURCE\)/makeIntResource/g;/[^a-zA-Z0-9_]defined[^a-zA-Z0-9_]/d;/\(void\)0/d;/__MINGW_NAME_UAW_EXT/d;s/LongToHandle/\(HANDLE\)\(LONG_PTR\)/g;/__pic__/d" >>%out%
+paste -d" " name.tmp def.tmp | ssed -n -R "s/^([A-Z0-9_]+) ((?!{).*[0-9].*(?<!}))$/static const auto \L\1\E = \2;/p" | ssed -R "s/__MINGW_NAME_AW\(MAKEINTRESOURCE\)/\(LPTSTR\)\(ULONG_PTR\)/g;/[^a-zA-Z0-9_]defined[^a-zA-Z0-9_]/d;/\(void\)0/d;/__MINGW_NAME_UAW_EXT/d;s/LongToHandle/\(HANDLE\)\(LONG_PTR\)/g;/__pic__/d" >>%out%
 
 del tags.tmp Trace.out name.tmp def.c def.tmp expanded.c
 
