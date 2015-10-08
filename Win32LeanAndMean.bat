@@ -62,6 +62,8 @@ cd.>%out%
 call :run 64
 >>%out% echo #else
 call :run 32
+>>%out% echo inline LONG_PTR __stdcall SetWindowLongPtrW(HWND hWnd,int nIndex,LONG dwNewLong)
+>>%out% echo     {return SetWindowLongW(hWnd,nIndex,dwNewLong);}
 >>%out% echo #endif
 >>%out% echo #ifdef _MSC_VER
 >>%out% echo #pragma warning(pop)
